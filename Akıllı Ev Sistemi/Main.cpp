@@ -3086,22 +3086,22 @@ void evdeBulunanHerseyinListesi(home& evim, mutfak& myMutfak, salon& mySalon, ba
 	mySalon.sicaklikVeNemDurum();
 	mySalon.prizlerinVeLambalarinListelenmesi();
 	cout << "Perdenin Þuan ki Durumu: ";
-	if (myMutfak.getPerdeDurum() == 0) {
+	if (mySalon.getPerdeDurum() == 0) {
 		cout << "Perde kapalý!" << endl << endl;
 	}
-	else if (myMutfak.getPerdeDurum() > 0 && myMutfak.getPerdeDurum() <= 250) {
+	else if (mySalon.getPerdeDurum() > 0 && mySalon.getPerdeDurum() <= 250) {
 		cout << "Perdenin neredeyse tamamý kapalý!" << endl << endl;
 	}
-	else if (myMutfak.getPerdeDurum() > 250 && myMutfak.getPerdeDurum() <= 500) {
+	else if (mySalon.getPerdeDurum() > 250 && mySalon.getPerdeDurum() <= 500) {
 		cout << "Perde yarýya yakýn kapalý!" << endl << endl;
 	}
-	else if (myMutfak.getPerdeDurum() > 500 && myMutfak.getPerdeDurum() <= 750) {
+	else if (mySalon.getPerdeDurum() > 500 && mySalon.getPerdeDurum() <= 750) {
 		cout << "Perdenin yarýdan fazlasý açýk!" << endl << endl;
 	}
-	else if (myMutfak.getPerdeDurum() > 750 && myMutfak.getPerdeDurum() <= 999) {
+	else if (mySalon.getPerdeDurum() > 750 && mySalon.getPerdeDurum() <= 999) {
 		cout << "Perdenin neredeyse tamamý açýk!" << endl << endl;
 	}
-	else if (myMutfak.getPerdeDurum() == 1000) {
+	else if (mySalon.getPerdeDurum() == 1000) {
 		cout << "Perde açýk!" << endl << endl;
 	}
 	cout << "Klimanýzýn Þuan ki Durumu: ";

@@ -262,7 +262,7 @@ void home::evcilHayvanDurumuSorgulama() {
 	getline(cin, evcilHayvanAdi);
 	if (mEvcilHayvan.find(evcilHayvanAdi) != mEvcilHayvan.end()) {
 		if (mEvcilHayvan[evcilHayvanAdi] > 0) {
-			cout << "Evcil Hayvanın Adı: " << evcilHayvanAdi << " , Evcil Hayvanın yemi var ve doluluk oranı: " << endl;
+			cout << "Evcil Hayvanın Adı: " << evcilHayvanAdi << " , Evcil Hayvanın yemi var ve doluluk oranı: " << mEvcilHayvan[evcilHayvanAdi] << endl;
 		}
 		else if (mEvcilHayvan[evcilHayvanAdi] == 0) {
 			cout << "Evcil Hayvanın Adı: " << evcilHayvanAdi << " , Evcil Hayvanın yemi kalmamış." << endl;
