@@ -52,7 +52,7 @@ void kullaniciAdSoyadDegistirme(login& giris, string& ad, string& soyad) {
 }
 
 void tumEvinGuvenlikDurumlari
-(mutfak& myMutfak, salon& mySalon, banyo& myBanyo, tuvalet& myTuvalet, koridor& myKoridor, map<int, odalar>& mOda) {
+(home& evim, mutfak& myMutfak, salon& mySalon, banyo& myBanyo, tuvalet& myTuvalet, koridor& myKoridor, map<int, odalar>& mOda) {
 	int odalardaGuvenlikSorunu = 0;
 	for (const auto& odalarim : mOda) {
 
@@ -74,14 +74,16 @@ void tumEvinGuvenlikDurumlari
 	}
 
 
-	if (myMutfak.getYanginDurum() == 0 && myMutfak.getSuBaskiniDurum() == 0 && myMutfak.getHirsizDurum() == 0
-		&& mySalon.getYanginDurum() == 0 && mySalon.getSuBaskiniDurum() == 0 && mySalon.getHirsizDurum() == 0
-		&& myBanyo.getYanginDurum() == 0 && myBanyo.getSuBaskiniDurum() == 0 && myBanyo.getHirsizDurum() == 0
-		&& myTuvalet.getYanginDurum() == 0 && myTuvalet.getSuBaskiniDurum() == 0 && myTuvalet.getHirsizDurum() == 0
-		&& myKoridor.getYanginDurum() == 0 && myKoridor.getSuBaskiniDurum() == 0 && myKoridor.getHirsizDurum() == 0
-		&& odalardaGuvenlikSorunu == 0) {
+	if (myMutfak.getYanginDurum() == 0 && myMutfak.getSuBaskiniDurum() == 0 && myMutfak.getHirsizDurum() == 0 && myMutfak.getDepremDurum()==0
+		&& mySalon.getYanginDurum() == 0 && mySalon.getSuBaskiniDurum() == 0 && mySalon.getHirsizDurum() == 0 && mySalon.getDepremDurum() == 0
+		&& myBanyo.getYanginDurum() == 0 && myBanyo.getSuBaskiniDurum() == 0 && myBanyo.getHirsizDurum() == 0 && myBanyo.getDepremDurum() == 0
+		&& myTuvalet.getYanginDurum() == 0 && myTuvalet.getSuBaskiniDurum() == 0 && myTuvalet.getHirsizDurum() == 0 && myTuvalet.getDepremDurum() == 0
+		&& myKoridor.getYanginDurum() == 0 && myKoridor.getSuBaskiniDurum() == 0 && myKoridor.getHirsizDurum() == 0 && myKoridor.getDepremDurum() == 0
+		&& evim.getDepremDurum() ==0 && odalardaGuvenlikSorunu == 0) {
 
 		cout << "Evinizde Herhangi Bir Sorun Yoktur...." << endl << endl;
+	}if (evim.getDepremDurum() > 0) {
+		evim.depremOluyor();
 	}
 	if (myMutfak.getYanginDurum() > 0) {
 		myMutfak.yanginVar();
@@ -128,6 +130,12 @@ void tumEvinGuvenlikDurumlari
 	if (myKoridor.getHirsizDurum() > 0) {
 		myKoridor.hirsizGirdi();
 	}
+	/*
+	if (myMutfak.getDepremDurum() > 0 || mySalon.getDepremDurum() > 0
+		|| myBanyo.getDepremDurum() > 0 || myTuvalet.getDepremDurum() > 0 || myKoridor.getDepremDurum() > 0) {
+		myMutfak.depremOluyor();
+	}
+	*/
 }
 
 int evcilHayvanMenusu(int& secenek, home& evim) {
@@ -3041,7 +3049,7 @@ void evdeBulunanHerseyinListesi(home& evim, mutfak& myMutfak, salon& mySalon, ba
 	cout << "\n\n\n-*-*-*-*-*-*-*-EVDE BULUNAN HERÞEYÝN DURUMLARI-*-*-*-*-*-*-*-\n\n\n";
 	//Ev
 	cout << "Evin Adý: " << evim.getHomeName() << endl << endl;
-	tumEvinGuvenlikDurumlari(myMutfak, mySalon, myBanyo, myTuvalet, myKoridor, mOda);
+	tumEvinGuvenlikDurumlari(evim,myMutfak, mySalon, myBanyo, myTuvalet, myKoridor, mOda);
 	//Mutfak
 	cout << "\nMutfak Adý: " << myMutfak.getMutfakAdi() << endl;
 	myMutfak.sicaklikVeNemDurum();
@@ -3232,7 +3240,7 @@ basaDon:
 		break;
 	case 7:
 		cout << "/*/*/*/*/*/---> Güvenlik Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
-		tumEvinGuvenlikDurumlari(myMutfak, mySalon, myBanyo, myTuvalet, myKoridor, mOda);
+		tumEvinGuvenlikDurumlari(evim,myMutfak, mySalon, myBanyo, myTuvalet, myKoridor, mOda);
 		goto basaDon;
 		break;
 	case 8:
