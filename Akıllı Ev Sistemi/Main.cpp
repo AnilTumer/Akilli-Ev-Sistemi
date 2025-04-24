@@ -3240,7 +3240,7 @@ basaDon:
 		break;
 	case 7:
 		cout << "/*/*/*/*/*/---> Güvenlik Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
-		tumEvinGuvenlikDurumlari(evim,myMutfak, mySalon, myBanyo, myTuvalet, myKoridor, mOda);
+		tumEvinGuvenlikDurumlari(evim, myMutfak, mySalon, myBanyo, myTuvalet, myKoridor, mOda);
 		goto basaDon;
 		break;
 	case 8:
