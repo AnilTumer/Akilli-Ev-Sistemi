@@ -17,7 +17,7 @@ void girisBilgisiDegistirme(login& giris, string& ad, string& soyad, string& kul
 	int bilgiDegisimKontrol = giris.girisBilgileriDegistir();
 	if (bilgiDegisimKontrol == 1) {
 		string newID, newPassword;
-		cout << "Kullanýcý adi þifre deðiþtrime bölümü.. " << endl << endl;
+		cout << "Kullanýcý adý þifre deðiþtrime bölümü.. " << endl << endl;
 		cout << "Lütfen yeni kullanýcý adýnýzý giriniz: ";
 		cin >> newID;
 		cout << "Lütfen yeni þifrenizi giriniz: ";
@@ -40,7 +40,7 @@ void girisBilgisiDegistirme(login& giris, string& ad, string& soyad, string& kul
 }
 
 void kullaniciAdSoyadDegistirme(login& giris, string& ad, string& soyad) {
-	cout << "Kullanýcý ad ve soyad deðiþtrime bölümü.. " << endl << endl;
+	cout << "Kullanýcý ad ve soyad deðiþtirme bölümü.. " << endl << endl;
 	cout << "Merhaba " << giris.getAd() << " " << giris.getSoyad() << "." << endl;
 	cout << "Lütfen adýnýzý giriniz: ";
 	cin.ignore();
@@ -130,12 +130,7 @@ void tumEvinGuvenlikDurumlari
 	if (myKoridor.getHirsizDurum() > 0) {
 		myKoridor.hirsizGirdi();
 	}
-	/*
-	if (myMutfak.getDepremDurum() > 0 || mySalon.getDepremDurum() > 0
-		|| myBanyo.getDepremDurum() > 0 || myTuvalet.getDepremDurum() > 0 || myKoridor.getDepremDurum() > 0) {
-		myMutfak.depremOluyor();
-	}
-	*/
+
 }
 
 int evcilHayvanMenusu(int& secenek, home& evim) {
@@ -297,27 +292,27 @@ a:
 		return secenek;
 		break;
 	case 1:
-		cout << "/*/*/*/*/*/---> Lamba Ekleme Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
+		cout << "/*/*/*/*/*/---> Saksý Ekleme Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
 		pGuvenlik->saksiEkle();
 		goto basaDon;
 		break;
 	case 2:
-		cout << "/*/*/*/*/*/---> Lamba Çýkarma Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
+		cout << "/*/*/*/*/*/---> Saksý Çýkarma Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
 		pGuvenlik->saksiCikarma();
 		goto basaDon;
 		break;
 	case 3:
-		cout << "/*/*/*/*/*/---> Bir Lambanýn Durumunu Öðrenme Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
+		cout << "/*/*/*/*/*/---> Bir Saksýnýn Durumunu Öðrenme Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
 		pGuvenlik->saksiDurumuSorgulama();
 		goto basaDon;
 		break;
 	case 4:
-		cout << "/*/*/*/*/*/---> Bir Lambanýn Durumunu Deðiþtirme Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
+		cout << "/*/*/*/*/*/---> Bir Saksýnýn Durumunu Deðiþtirme Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
 		pGuvenlik->saksiDurumunuDegistirme();
 		goto basaDon;
 		break;
 	case 5:
-		cout << "/*/*/*/*/*/---> Tüm Lambalarý Listeleme Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
+		cout << "/*/*/*/*/*/---> Tüm Saksýlarý Listeleme Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
 		pGuvenlik->saksilarinListelenmesi();
 		goto basaDon;
 		break;
@@ -558,7 +553,7 @@ a:
 		return secenek;
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-3 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-3 arasýnda bir sayý giriniz (ANA MENÜ=9,ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -602,7 +597,7 @@ basaDon:
 	cout << "--------------------------------------------" << endl << endl << endl;
 
 b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-2): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-4): ";
 a:
 	cin >> secenek;
 	try {
@@ -706,7 +701,7 @@ a:
 		return secenek;
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-4 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-4 arasýnda bir sayý giriniz (ANA MENÜ=9,ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -768,7 +763,7 @@ a:
 		return secenek;
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-4 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-2 arasýnda bir sayý giriniz (ANA MENÜ=9,ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -1076,7 +1071,7 @@ basaDon:
 	cout << "|                                          |" << endl;
 	cout << "--------------------------------------------" << endl << endl << endl;
 b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-4): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-8): ";
 a:
 	cin >> secenek;
 	try {
@@ -1249,7 +1244,7 @@ a:
 		}
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-4 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-8 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -1494,7 +1489,7 @@ basaDon:
 	cout << "|                                          |" << endl;
 	cout << "--------------------------------------------" << endl << endl << endl;
 b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-4): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-7): ";
 a:
 	cin >> secenek;
 	try {
@@ -1849,7 +1844,7 @@ basaDon:
 	cout << "|                                          |" << endl;
 	cout << "--------------------------------------------" << endl << endl << endl;
 b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-4): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-7): ";
 a:
 	cin >> secenek;
 	try {
@@ -1974,7 +1969,7 @@ a:
 		return secenek;
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-4 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-7 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -2313,7 +2308,7 @@ basaDon:
 	cout << "|                                          |" << endl;
 	cout << "--------------------------------------------" << endl << endl << endl;
 b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-4): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-5): ";
 a:
 	cin >> secenek;
 	try {
@@ -2612,7 +2607,7 @@ basaDon:
 	cout << "|                                          |" << endl;
 	cout << "--------------------------------------------" << endl << endl << endl;
 b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-4): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-5): ";
 a:
 	cin >> secenek;
 	try {
@@ -2668,7 +2663,7 @@ a:
 		goto basaDon;
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-4 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-5 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -2912,7 +2907,7 @@ basaDon:
 	cout << "|                                          |" << endl;
 	cout << "--------------------------------------------" << endl << endl << endl;
 b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-4): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-7): ";
 a:
 	cin >> secenek;
 	try {
@@ -2976,7 +2971,7 @@ a:
 		goto basaDon;
 		break;
 	case 7:
-		cout << "/*/*/*/*/*/---> Koridorun Sýcaklýk ve Nem Durumu Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
+		cout << "/*/*/*/*/*/---> Koridorun Saksý Bölümüne Aktarýlýyor <---/*/*/*/*/*/ " << endl;
 		saksiMenusu(secenek, pGuvenlik);
 		if (secenek == 0) {
 			return secenek;
@@ -2984,7 +2979,7 @@ a:
 		goto basaDon;
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-4 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-7 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -3004,7 +2999,7 @@ int kullaniciIslemleriMenusu(int& secenek,login& giris, home& evim, string& kull
 	cout << "--------------------------------------------" << endl << endl << endl;
 
 b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-5): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-3): ";
 a:
 	cin >> secenek;
 	try {
@@ -3038,7 +3033,7 @@ a:
 		kullaniciAdSoyadDegistirme(giris, ad, soyad);
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-5 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-3 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -3160,8 +3155,6 @@ void evdeBulunanHerseyinListesi(home& evim, mutfak& myMutfak, salon& mySalon, ba
 	myKoridor.prizlerinVeLambalarinListelenmesi();
 	myKoridor.saksilarinListelenmesi();
 
-
-
 }
 
 int akilliEvSistemiAnaMenu(int& secenek, login& giris, home& evim, mutfak& myMutfak, salon& mySalon, map<int, odalar>& mOda, banyo& myBanyo,
@@ -3187,7 +3180,7 @@ basaDon:
 	cout << "--------------------------------------------" << endl << endl << endl;
 
 	b:
-	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-9): ";
+	cout << "Lütfen kontrol etmek istediðiniz bölümü seçiniz(1-10): ";
 	a:
 	cin >> secenek;
 	try {
@@ -3260,7 +3253,7 @@ basaDon:
 		goto basaDon;
 		break;
 	default:
-		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-9 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
+		cout << "Yanlýþ bir tuþlama yaptýnýz! Lütfen 1-10 arasýnda bir sayý giriniz (ÇIKIÞ=0): ";
 		goto a;
 	}
 	return secenek;
@@ -3274,7 +3267,6 @@ int main() {
 	cout << "|                                              |" << endl;
 	cout << "|                 * ANIL TUMER *               |" << endl;
 	cout << "|                *  GhosTTymeR  *              |" << endl;
-	cout << "|                                              |" << endl;
 	cout << "|                                              |" << endl;
 	cout << "------------------------------------------------" << endl << endl << endl;
 

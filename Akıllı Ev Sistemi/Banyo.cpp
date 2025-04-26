@@ -116,7 +116,7 @@ void banyo::prizCikartma() {
 	if (mBanyoPriz.size() != 0) {
 		if (mBanyoPriz.find(prizSilinecek) != mBanyoPriz.end()) {
 			mBanyoPriz.erase(prizSilinecek);
-			cout << prizSilinecek << "Ýsimli priz banyodan çýkarýlmýþtýr...\n\n";
+			cout << prizSilinecek << " isimli priz banyodan çýkarýlmýþtýr...\n\n";
 		}
 		else {
 			cout << "Girdiðiniz priz adý bulunamadý!\n\n";
@@ -248,7 +248,7 @@ void banyo::lambaCikarma() {
 //Girilen lambanýn durumunu sorgulama
 void banyo::lambaDurumuSorgulama() {
 	string lampAdi;
-	cout << "Lütfen durumunu öðrenmek istediðiniz prizin adýný giriniz: ";
+	cout << "Lütfen durumunu öðrenmek istediðiniz lambanýn adýný giriniz: ";
 	cin.ignore();
 	getline(cin, lampAdi);
 	if (mBanyoLamp.find(lampAdi) != mBanyoLamp.end()) {
@@ -297,7 +297,7 @@ void banyo::lambaDurumunuDegistirme() {
 
 	}
 	else {
-		cout << endl << banyo::banyoAdi << " isimli banyonuzda böyle bir priz bulunmuyor!\n";
+		cout << endl << banyo::banyoAdi << " isimli banyonuzda böyle bir lamba bulunmuyor!\n";
 	}
 }
 

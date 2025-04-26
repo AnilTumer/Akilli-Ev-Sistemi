@@ -394,7 +394,7 @@ void koridor::lambaCikarma() {
 //Girilen lambanýn durumunu sorgulama
 void koridor::lambaDurumuSorgulama() {
 	string lampAdi;
-	cout << "Lütfen durumunu öðrenmek istediðiniz prizin adýný giriniz: ";
+	cout << "Lütfen durumunu öðrenmek istediðiniz lambanýn adýný giriniz: ";
 	cin.ignore();
 	getline(cin, lampAdi);
 	if (mKoridorLamp.find(lampAdi) != mKoridorLamp.end()) {
@@ -443,7 +443,7 @@ void koridor::lambaDurumunuDegistirme() {
 
 	}
 	else {
-		cout << endl << getKoridorAdi() << " isimli koridornuzda böyle bir priz bulunmuyor!\n";
+		cout << endl << getKoridorAdi() << " isimli koridornuzda böyle bir lamba bulunmuyor!\n";
 	}
 }
 

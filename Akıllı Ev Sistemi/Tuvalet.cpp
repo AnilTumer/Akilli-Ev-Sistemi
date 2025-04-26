@@ -249,7 +249,7 @@ void tuvalet::lambaCikarma() {
 //Girilen lambanýn durumunu sorgulama
 void tuvalet::lambaDurumuSorgulama() {
 	string lampAdi;
-	cout << "Lütfen durumunu öðrenmek istediðiniz prizin adýný giriniz: ";
+	cout << "Lütfen durumunu öðrenmek istediðiniz lambanýn adýný giriniz: ";
 	cin.ignore();
 	getline(cin, lampAdi);
 	if (mTuvaletLamp.find(lampAdi) != mTuvaletLamp.end()) {
@@ -298,7 +298,7 @@ void tuvalet::lambaDurumunuDegistirme() {
 
 	}
 	else {
-		cout << endl << tuvalet::tuvaletAdi << " isimli tuvaletinizden böyle bir priz bulunmuyor!\n";
+		cout << endl << tuvalet::tuvaletAdi << " isimli tuvaletinizden böyle bir lamba bulunmuyor!\n";
 	}
 }
 

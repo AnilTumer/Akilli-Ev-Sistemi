@@ -415,7 +415,7 @@ void salon::lambaCikarma() {
 //Girilen lambanýn durumunu sorgulama
 void salon::lambaDurumuSorgulama() {
 	string lampAdi;
-	cout << "Lütfen durumunu öðrenmek istediðiniz prizin adýný giriniz: ";
+	cout << "Lütfen durumunu öðrenmek istediðiniz lambanýn adýný giriniz: ";
 	cin.ignore();
 	getline(cin, lampAdi);
 	if (mSalonLamp.find(lampAdi) != mSalonLamp.end()) {
@@ -464,7 +464,7 @@ void salon::lambaDurumunuDegistirme() {
 
 	}
 	else {
-		cout << endl << salon::salonAdi<< " isimli salonunuzda böyle bir priz bulunmuyor!\n";
+		cout << endl << salon::salonAdi<< " isimli salonunuzda böyle bir lamba bulunmuyor!\n";
 	}
 }
 

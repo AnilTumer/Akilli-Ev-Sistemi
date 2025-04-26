@@ -418,7 +418,7 @@ void odalar::lambaCikarma() {
 //Girilen lambanýn durumunu sorgulama
 void odalar::lambaDurumuSorgulama() {
 	string lampAdi;
-	cout << "Lütfen durumunu öðrenmek istediðiniz prizin adýný giriniz: ";
+	cout << "Lütfen durumunu öðrenmek istediðiniz lambanýn adýný giriniz: ";
 	cin.ignore();
 	getline(cin, lampAdi);
 	if (mOdaLamp.find(lampAdi) != mOdaLamp.end()) {
@@ -467,7 +467,7 @@ void odalar::lambaDurumunuDegistirme() {
 
 	}
 	else {
-		cout << endl << getOdaAdi() << " isimli odanýzda böyle bir priz bulunmuyor!\n";
+		cout << endl << getOdaAdi() << " isimli odanýzda böyle bir lamba bulunmuyor!\n";
 	}
 }
 

@@ -187,6 +187,7 @@ void home::sicaklikVeNemDurum() {
 
 }
 
+
 //Evcil Hayvan Bölümü
 
 //Evcil Hayvan Sayac
@@ -199,7 +200,7 @@ void home::evcilHayvanEkleme() {
 	string evcilHayvanIsmi, devamlilikDurumu;
 	cout << "-->Evcil Hayvan Ekleme<--\n\n\n";
 	do {
-		cout << "Lütfen evinizde bulunan " << mEvcilHayvan.size() + 1 << ". evcil hayvanýzýn adýný giriniz: ";
+		cout << "Lütfen evinizde bulunan " << mEvcilHayvan.size() + 1 << ". Evcil hayvanýzýn adýný giriniz: ";
 		cin.ignore();
 		getline(cin, evcilHayvanIsmi);
 		mEvcilHayvan[evcilHayvanIsmi] = 0;
